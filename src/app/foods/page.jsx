@@ -13,6 +13,12 @@ const getFoods = async (search) => {
     // console.log(data.foods);
 }
 
+export const metadata = {
+    title: "All Foods",
+    description: "Best FastFood in Noakali",
+  };
+
+
 const FoodsPage = async ({ searchParams }) => {
     const { search = " " } = await searchParams;
     console.log(style);
