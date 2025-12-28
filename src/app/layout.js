@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
        <div className="space-x-5">
         <Link prefetch={false} href="/foods" className="btn"> Foods </Link>
         <Link href="/reviews" className="btn"> reviews </Link>
+        <Link href="/feedback" className="btn"> feedback </Link>
        </div>
       </header>
 

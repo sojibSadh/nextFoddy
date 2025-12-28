@@ -10,7 +10,7 @@ const client = new MongoClient(uri, {
   }
 });
 
-const connect = (collection) => {
+export const connect = (collection) => {
     const database=process.env.DB_NAME;
     return client.db(database).collection(collection)
 }

@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export function generateStaticParams() {
   return [{ id: '52792' }, { id: '52891' }, { id: '52860' }]
 }
@@ -48,7 +50,9 @@ const GetSingleFood = async ({ params }) => {
   const { id } = await params;
   const food = await SingleFood(id);
 
-  console.log(food.video)
+  if(!food.title) {
+    redirect("/foods")
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
